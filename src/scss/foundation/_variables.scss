@@ -1,0 +1,30 @@
+/* ----------------------------------------------------------
+/* variables
+/* 変数
+/* ---------------------------------------------------------- */
+
+/* ----------------------------------------------------------
+/* color
+/* ---------------------------------------------------------- */
+$base-color: #fcfcfc;
+$main-color: #6e4c39;
+$main-lighten-color: lighten($main-color, 50%);
+$accent-color: #0153ac;
+$accent-lighten-color: lighten($accent-color, 50%);
+$line-color: #C4C4C4;
+
+$thin-gray: #f2f2f2;
+
+$text-color: $main-color;
+$link-color: $accent-color;
+$bg-color: $base-color;
+
+/* ----------------------------------------------------------
+/* break point
+/* ---------------------------------------------------------- */
+$content-size: 1200px;
+$break-point: $content-size - 1px;
+$main-size: 1065px;
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;

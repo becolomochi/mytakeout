@@ -1,0 +1,163 @@
+/* ----------------------------------------------------------
+/* Nav
+/* ---------------------------------------------------------- */
+
+.nav {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  @include mq-md {
+    display: none;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba($main-color,0.8);
+    &.is-open {
+      display: flex;
+      visibility: visible;
+      flex-flow: column;
+      justify-content: center;
+      animation: 0.1s fadeIn ease-in forwards;
+    }
+  }
+}
+
+.nav__item {
+  margin-left: 32px;
+  line-height: 1.2;
+  @include mq-md {
+    max-width: 240px;
+    margin: 24px auto;
+    font-size: 120%;
+  }
+  &.is-sp {
+    display: none;
+    visibility: hidden;
+    @include mq-md {
+      display: block;
+      visibility: visible;
+      text-align: right;
+      font-size: 90%;
+      border-top: 1px dotted #eee;
+      padding-top: 8px;
+      order: 10;
+    }
+  }
+}
+
+@include mq-md {
+  .nav.is-open {
+    .nav__item {
+      opacity: 0;
+      @for $i from 1 through 10 {
+        $delay: $i * 0.1;
+        &:nth-child(#{$i}) {
+          animation: 0.3s fadeIn #{$delay}s ease-in forwards;
+        }
+      }
+    }
+  }
+}
+
+.nav__link {
+  display: block;
+  padding: 0 8px 30px;
+  &:hover {
+    text-decoration: none;
+  }
+  &::before {
+    content: '';
+    display: block;
+    margin: 0 -8px 28px;
+    border: 2px solid transparent;
+  }
+  &.is-current, &:hover {
+    &::before {
+      border-color: $accent-color;
+    }
+  }
+  // @include mq-md {
+  //   padding: 0;
+  // }
+}
+
+.nav__item-ja {
+  display: block;
+  font-weight: bold;
+  color: $text-color;
+  @include mq-md {
+    display: inline;
+    margin-right: 1em;
+    color: #eee;
+  }
+}
+
+.nav__item-en {
+  font-size: 75%;
+  @include mq-md {
+    color: #f2f2f2;
+  }
+}
+
+.nav__toggle {
+  display: none;
+  visibility: hidden;
+  @include mq-md {
+    display: block;
+    visibility: visible;
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    z-index: 2;
+  }
+  @include mq-xs {
+    top: 4px;
+    right: 4px;
+  }
+}
+
+.nav__hamburger {
+  &, &::before, &::after {
+    display: inline-block;
+    width: 32px;
+    height: 3px;
+    background: $main-color;
+  }
+  margin-top: 22px;
+  transition: 0.3s;
+  &::before, &::after {
+    content: '';
+  }
+  &::before {
+    transform: translateY(-27px);
+    transition: 0.3s 0.1s;
+  }
+  &::after {
+    transform: translateY(-35px);
+    transition: 0.3s 0.1s;
+  }
+}
+
+.nav__toggle.is-open {
+  .nav__hamburger {
+    &, &::before, &::after {
+      background: #eee;
+    }
+    & {
+      background: transparent;
+    }
+    &::before {
+      transform: translateY(-16px) rotate(30deg);
+    }
+    &::after {
+      transform: translateY(-44px) rotate(-30deg);
+    }
+  }
+}

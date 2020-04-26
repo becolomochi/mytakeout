@@ -1,0 +1,65 @@
+/* ----------------------------------------------------------
+/* Main
+/* ---------------------------------------------------------- */
+
+.main {
+  padding-top: 96px;
+  // max-width: 960px;
+  // margin: 0 auto;
+  // transform: skew(0,5deg);
+  // padding-bottom: 300px;
+  // opacity: 0;
+  // animation: 0.3s ease-in fadeIn 2.1s forwards;
+  // @include mq-xs {
+  //   padding-bottom: 60px;
+  // }
+  // &.is-thanks {
+  //   background: none;
+  //   transform: none;
+  //   padding: 180px 0;
+  //   text-align: center;
+  //   @include mq-xs {
+  //     padding: 140px 0;
+  //   }
+  // }
+}
+
+.main__wrapper {
+  // max-width: $content-size;
+  // margin: 0 auto;
+  // padding: 0 16px;
+  // @include mq-md {
+  //   padding: 0 32px;
+  // }
+  // @include mq-xs {
+  //   padding: 0 16px;
+  // }
+  // &.is-mainvisual {
+  //   padding: 0;
+  //   height: 870px;
+  //   // mainvisual__text の位置をもとに調整
+  //   @include mq {
+  //     height: calc(48vw + 145px + 280px);
+  //   }
+  //   @include mq-md {
+  //     height: calc(100vw * 0.75 + 35px + 120px);
+  //   }
+  //   @include mq-xs {
+  //     height: calc(100vw * 0.75 + 78px + 24px);
+  //   }
+  // }
+}
+
+// .main__content {
+//   max-width: $main-size;
+//   margin: 0 0 0 auto;
+//   @include mq {
+//     margin-left: 136px;
+//   }
+//   @include mq-md {
+//     margin-left: 0;
+//   }
+//   @include mq-sm {
+//     margin-left: 0;
+//   }
+// }

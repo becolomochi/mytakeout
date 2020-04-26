@@ -1,0 +1,121 @@
+/* ----------------------------------------------------------
+/* Main visual
+/* ---------------------------------------------------------- */
+
+.mainvisual {
+  height: 985px;
+  @include mq-md {
+    height: auto;
+  }
+}
+
+.mainvisual__back {
+  position: fixed;
+  top: 200px;
+  left: 0;
+  right: 0;
+  z-index: -3;
+  height: 592px;
+  transform: skew(0,5deg);
+  background: #81cbe6;
+  @include mq {
+    height: 48vw;
+  }
+  @include mq-md {
+    transform: none;
+    background: none;
+    overflow: hidden;
+    top: calc(115px + 33px); // 115px ... imageの位置
+    height: 0;
+    padding-top: 62vw;
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: calc(0.09 * (0.09 * 50% + 50vw));
+      left: -50vw;
+      width: 200%;
+      height: calc(100% - 0.09 * (0.09 * 50% + 50vw) * 2);
+      transform-origin: center;
+      transform: rotate(5deg);
+      background: #81cbe6;
+    }
+  }
+  @include mq-xs {
+    top: calc(65px + 13px); // 65px ... imageの位置
+  }
+}
+
+.mainvisual__image {
+  position: fixed;
+  top: 115px;
+  z-index: -2;
+  max-width: $main-size;
+  @include mq-xs {
+    top: 65px;
+  }
+}
+
+.mainvisual__image-back,
+.mainvisual__image-build,
+.mainvisual__image-chara,
+.mainvisual__image-cloud {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  animation: 0.3s ease-in fadeIn forwards;
+}
+
+.mainvisual__image-back {
+  animation-delay: 0.6s;
+}
+.mainvisual__image-build {
+  animation-delay: 0.9s;
+}
+.mainvisual__image-chara {
+  animation: 0.3s ease-in fadeIn 0.3s forwards,
+  5s cubic-bezier(.64,1.87,.64,.64) pyon infinite;
+}
+.mainvisual__image-cloud {
+    &.is-1 {
+      animation: 0.3s ease-in fadeIn 1.2s forwards,
+      2s ease-in fluffy infinite reverse;  
+    }
+    &.is-2 {
+      animation: 0.3s ease-in fadeIn 1.5s forwards,
+      2s ease-in fluffy 0.3s infinite reverse;
+    }
+}
+
+.mainvisual__text {
+  position: fixed;
+  left: 50%;
+  top: 740px;
+  z-index: -1;
+  transform: translate(-120%, 0);
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.45;
+  letter-spacing: 0.1em;
+  opacity: 0;
+  animation: 0.3s ease-in fadeIn 1.8s forwards;
+  @include mq {
+    left: 58px;
+    top: calc(48vw + 145px);
+    transform: translate(0, 0);
+  }
+  @include mq-md {
+    left: 32px;
+    top: calc(100vw * 0.75 + 35px);
+  }
+  @include mq-sm {
+    font-size: 22px;
+  }
+  @include mq-xs {
+    top: calc(100vw * 0.75 + 25px);
+    font-size: 18px;
+    letter-spacing: 0.05em;
+  }
+}

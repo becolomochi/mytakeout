@@ -1,0 +1,69 @@
+/* ----------------------------------------------------------
+/* Section
+/* ---------------------------------------------------------- */
+
+.section {
+  padding: 80px 0;
+  // display: flex;
+  // padding: 120px 0;
+  // min-height: 490px;
+  // transform: skew(0,-5deg);
+  // @include mq-sm {
+  //   padding: 60px 0;
+  // }
+  &:nth-child(even) {
+    background: #fff;
+  }
+}
+
+.section__headline {
+  // width: 32px;
+  // flex: 0 0 32px;
+  // margin: 0;
+  margin-top: 0;
+  text-align: center;
+  font-size: 32px;
+  &::after {
+    content: '';
+    display: block;
+    margin: 16px auto;
+    width: 32px;
+    height: 3px;
+    background: $main-color;
+  }
+  // background: url(/img/ico_headline.svg) no-repeat;
+  // writing-mode: vertical-rl;
+  // text-orientation: mixed; // 英字は縦書きにしないで90度回転
+  // line-height: 1;
+  // @include mq-sm {
+  //   width: 30px;
+  //   flex: 0 0 30px;
+  //   padding-top: 38px;
+  // }
+}
+
+.section__inner {
+  max-width: $content-size;
+  margin: 0 auto;
+  padding: 0 16px;
+  &.is-center {
+    display: flex;
+    justify-content: center;
+  }
+  // flex: 1 1 auto;
+  // margin-left: 96px;
+  // @include mq-md {
+  //   margin-left: 48px;
+  // }
+  // @include mq-xs {
+  //   margin-left: 32px;
+  // }
+}
+
+.section__inner-column {
+  margin-top: 40px;
+  flex: 0 1 640px;
+  &.is-flex {
+    display: flex;
+  }
+}

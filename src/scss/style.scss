@@ -1,0 +1,40 @@
+@charset 'utf-8';
+
+// lib
+@import '~ress/dist/ress.min';
+
+// Fontawesome
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+// YakuhanJP
+$yakuhanjps-font-dir: '~yakuhanjp/dist/fonts';
+@import '~yakuhanjp/src/scss/yakuhanjp_s';
+
+// foundation
+@import 'foundation/variables';
+@import 'foundation/mixin';
+@import 'foundation/animation';
+@import 'foundation/base';
+
+// block
+// @import 'block/loading';
+// @import 'block/header';
+// @import 'block/nav';
+// @import 'block/main';
+// @import 'block/section';
+// @import 'block/item-list';
+// @import 'block/author';
+// @import 'block/form';
+// @import 'block/footer';
+
+
+// @import 'block/mainvisual';
+// @import 'block/profile';
+
+// item
+// @import 'item/text';
+// @import 'item/dl';

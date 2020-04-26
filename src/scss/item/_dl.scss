@@ -1,0 +1,36 @@
+/* ----------------------------------------------------------
+/* dl
+/* ---------------------------------------------------------- */
+
+.dl {
+  dt, dd {
+    display: inline-block;
+    margin-top: 16px;
+    vertical-align: top;
+  }
+  dt {
+    width: 120px;
+    font-weight: bold;
+  }
+  dd {
+    width: calc(100% - 130px);
+    border-left: 4px solid $line-color;
+    padding-left: 16px;
+  }
+  @include mq-sm {
+    display: block;
+    dt, dd {
+      width: 100%;
+      padding: 0;
+    }
+    dt {
+      border-bottom: 1px solid $main-color;
+      padding-bottom: 2px;
+      letter-spacing: 0.05em;
+    }
+    dd {
+      border-left: 0;
+      margin-top: 8px;
+    }
+  }
+}

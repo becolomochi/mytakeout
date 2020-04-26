@@ -1,0 +1,66 @@
+/* ----------------------------------------------------------
+/* Header
+/* ---------------------------------------------------------- */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 999;
+  // background: rgba($bg-color, 0.9);
+  // background: $bg-color;
+  // @include mq-md {
+  //   height: 88px;
+  // }
+  // @include mq-xs {
+  //   height: 56px;
+  // }
+}
+
+.header__inner {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  @include mq-md {
+    padding: 0;
+  }
+}
+
+.header__logo {
+  margin: 28px 8px 0;
+  flex: 0 0 200px;
+  pointer-events: auto;
+  font-size: 16px;
+  // @include mq-md {
+  //   flex: 0 0 80px;
+  // }
+  // @include mq-xs {
+  //   margin: 12px;
+  //   flex: 0 0 56px;
+  // }
+  // &.is-small {
+  //   flex: 0 0 64px;
+  //   @include mq-md {
+  //     margin: 16px 20px;
+  //     flex: 0 0 56px;
+  //   }
+  //   @include mq-xs {
+  //     margin: 8px 12px;
+  //     flex: 0 0 40px;
+  //   }
+  // }
+}
+
+.header__nav {
+  max-width: $main-size;
+  flex: 1 1 $main-size;
+  // border-top: 4px solid $main-color;
+  pointer-events: auto;
+  @include mq-md {
+    border-top: 0;
+  }
+}

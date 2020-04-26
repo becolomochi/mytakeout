@@ -1,0 +1,54 @@
+/* ----------------------------------------------------------
+/* Form
+/* ---------------------------------------------------------- */
+
+.form {
+  margin-top: 16px;
+}
+
+.form__control {
+  margin-top: 24px;
+  @include mq-xs {
+    margin-top: 16px;
+  }
+}
+
+.form__label {
+  display: block;
+  font-weight: bold;
+  .required {
+    color: $accent-color;
+  }
+}
+
+.form__input,
+.form__textarea {
+  display: block;
+  max-width: 700px;
+  width: 100%;
+  padding: 8px 10px;
+  background: #fff;
+  border: 2px solid $line-color;
+  @include placeholder($main-lighten-color);
+}
+
+.form__textarea {
+  height: 180px;
+  line-height: 1.5;
+}
+
+.form__submit {
+  @include button;
+  width: 100%;
+  background: $accent-color;
+  &:hover {
+    background: lighten($accent-color, 5%);
+  }
+  &:active {
+    background: $accent-color;
+  }
+}
+
+button[type=submit].form__submit {
+  color: #fff;
+}

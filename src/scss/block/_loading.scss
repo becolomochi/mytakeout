@@ -1,0 +1,44 @@
+
+/* ----------------------------------------------------------
+/* Loading
+/* ---------------------------------------------------------- */
+
+.loading__mask {
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.3s;
+  background: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  &.is-loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loading__icon {
+  text-align: center;
+  padding-top: 20px;
+  .dot {
+    display: inline-block;
+    margin: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}
+
+@for $i from 1 through 4 {
+  $delay: $i * 0.1;
+  .dot:nth-child(#{$i}) {
+    animation: 1s fade infinite #{$delay}s;
+  }
+}
+
+@keyframes fade {
+  from { opacity: 0;transform: scale(0); }
+  to { opacity: 1;transform: scale(1); }
+}
