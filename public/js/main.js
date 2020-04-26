@@ -109,7 +109,7 @@ const tw = document.getElementById('tweet-link');
 btn.addEventListener('click', function(){
   const result = takeout[Math.floor(Math.random() * (takeout.length - 1))];
   box.textContent = result;
-  tw.setAttribute('href', `https://twitter.com/intent/tweet?url=https://codepen.io/becolomochi/pen/JjYWwpM&text=今日のテイクアウト先は${result}です&via=becolomochi`);
+  tw.setAttribute('href', `https://twitter.com/intent/tweet?url=https://mytakeout.becolomochi.page&text=今日のテイクアウト先は${result}です&via=becolomochi`);
   tw.classList.remove('is-hidden');
 });
 
